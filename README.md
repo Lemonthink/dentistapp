@@ -1,5 +1,8 @@
 # dentistapp
 Dentist App with AI
+Figma homepage: 
+https://www.figma.com/file/F7u8zkuT4keoWZZT83yebF/Lemonthink?node-id=0%3A1
+A UI Design app that we are using as a rough draft/outline
 
 miro board: https://miro.com/app/board/o9J_llS_z48=/ 
 the miro board is for the essential steps of our product
