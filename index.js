@@ -3,7 +3,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
  
 app.get('/', function (req, res) {
-  res.send('<h1> welcome to LemonThink. We are very cool people.</h1>')
+  res.sendFile('homepage.html');
 })
 
 app.get('/dentist', function (req, res) {
