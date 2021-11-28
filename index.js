@@ -3,7 +3,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
  
 app.get('/', function (req, res) {
-  res.send(_dirname+'homepage.html');
+  res.sendFile(_dirname+'/homepage.html');
 })
 
 app.get('/dentist', function (req, res) {
