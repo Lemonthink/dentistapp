@@ -1,0 +1,22 @@
+{
+  "name": "dentistapp",
+  "version": "1.0.0",
+  "description": "Dentist App with AI Figma homepage:  https://www.figma.com/file/F7u8zkuT4keoWZZT83yebF/Lemonthink?node-id=0%3A1 A UI Design app that we are using as a rough draft/outline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemonthink/dentistapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lemonthink/dentistapp/issues"
+  },
+  "homepage": "https://github.com/Lemonthink/dentistapp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
