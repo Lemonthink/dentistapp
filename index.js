@@ -9,7 +9,9 @@ app.get('/', function (req, res) {
 app.get('/dentist', function (req, res) {
     res.send('I will find a treatment you')
 })
- 
+app.get('/readme', function (req, res) {
+  res.sendFile(__dirname+'/README.md')
+})
 app.get('/toothfairy', function (req, res) {
     res.send('I will give you money for your tooth')
 })
