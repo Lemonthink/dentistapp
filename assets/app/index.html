@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            body {
+                display:grid;
+                grid-template-areas: "h h"
+                                     "a m"
+                                     "f f";
+                width: 100vw;
+                height: 100vh;
+                margin: 0;
+                grid-template-rows: 100px auto 100px;
+                grid-template-columns: 250px auto;
+            }
+
+            header {
+                grid-area: h;
+            }
+
+            aside {
+                grid-area: a;
+            }
+
+            main {
+                grid-area: m;
+            }
+
+            footer {
+                grid-area: f;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            HEADER
+        </header>
+        <aside>
+            ASIDE
+        </aside>
+        <main>
+            MAIN
+        </main>
+        <footer>
+            FOOTER
+        </footer>
+        <script>
+            async function load() {
+                // LOADING THE FILE FROM THE ASSETS/APP FOLDER
+                const header = await fetch('header.html')
+                const footer = await fetch('footer.html')
+                const aside = await fetch('aside.html')
+                const main = await fetch('main.html')
+
+                // INSERTING THE FILE'S TEXT INTO THE ELEMENT
+                document.querySelector('header').innerHTML = await header.text();
+                document.querySelector('footer').innerHTML = await footer.text();
+                document.querySelector('aside').innerHTML = await aside.text();
+                document.querySelector('main').innerHTML = await main.text();
+            }
+
+            load();
+        </script>
+    </body>
+</html>

@@ -1,11 +1,15 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000   
 
 app.use(express.static("assets"));
 
 app.get('/', function (req, res) {
 	res.sendFile(__dirname + '/homepage.html');
+})
+
+app.get('/app', function (req, res) {
+	res.sendFile('app/index.html');
 })
 
 app.get('/miro', function (req, res) {
