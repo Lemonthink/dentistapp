@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000
- 
+
+app.use(express.static("assets"));
+
 app.get('/', function (req, res) {
 	res.sendFile(__dirname + '/homepage.html');
 })
@@ -15,7 +17,7 @@ app.get('/dentist', function (req, res) {
 })
 
 app.get('/data', function (req, res) {
-	//insert dataset using res.redirect or something in csv file
+	res.redirect('drug_info_datasets/UCIdrug_train.csv');
 })
 
 app.get('/readme', function (req, res) {
