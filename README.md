@@ -13,3 +13,13 @@ https://nodejs.org/en/download/
 Kaggle link: https://www.kaggle.com/claire66/combining-datasets
 Combining two datasets (including merging like columns) into one dataset to use
 
+Go to https://tailwindcss.com/docs/installation
+
+Install the dependencies:
+`npm install`
+
+Start the Tailwind CLI process by pasting this:
+`npx tailwindcss -i ./assets/app/input.css -o ./assets/app/output.css --watch`
+
+Start the web server:
+`nodemon index.js`
