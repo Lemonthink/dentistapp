@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    display:grid;
+    grid-template-areas: "h h"
+                         "a m"
+                         "f f";
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 250px auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    display: flex;
+}
+
+nav div {
+    margin: 20px;
+}
+
+nav div:hover {
+    color:blue;
+}
+
+aside {
+    grid-area: a;
+}
+
+main {
+    grid-area: m;
+}
+
+footer {
+    grid-area: f;
+}
+
+aside {
+    margin: 20px;
+}
+
+span{
+    /*margin-left: 40%;*/
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-heart-o {
+    margin: auto 7px;
+}
+
+#calendar {
+    width:80vw;
+    height:70vh;
+    border:1px solid #000;
+}

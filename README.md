@@ -19,7 +19,7 @@ Install the dependencies:
 `npm install`
 
 Start the Tailwind CLI process by pasting this:
-`npx tailwindcss -i ./assets/app/input.css -o ./assets/app/output.css --watch`
+`npx tailwindcss -i ./assets/app/src/input.css -o ./assets/app/dist/output.css --watch`
 
 Start the web server:
 `nodemon index.js`
