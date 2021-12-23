@@ -26,3 +26,9 @@ Start the Tailwind CLI process by pasting this:
 
 Start the web server:
 `nodemon index.js`
+
+For Video Do these steps:
+1. Click on Search Patient
+2. Type to search for patient and click
+3. Calendar should pop-up patients procedure
+4. Pop-up should show a potential risk from drug interactions
