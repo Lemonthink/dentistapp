@@ -16,6 +16,8 @@ Combining two datasets (including merging like columns) into one dataset to use
 
 Go to https://tailwindcss.com/docs/installation
 
+Tailwind classes: https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+
 Install the dependencies:
 `npm install`
 
