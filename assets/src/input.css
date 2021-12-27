@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Custom styles */
 body {
     display:grid;
     grid-template-areas: "h h"
@@ -51,8 +53,7 @@ aside {
     margin: 20px;
 }
 
-span{
-    /*margin-left: 40%;*/
+footer span{
     margin: 0 auto;
     display:flex;
     align-items: center;
