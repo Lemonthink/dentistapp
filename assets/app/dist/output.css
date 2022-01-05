@@ -946,7 +946,7 @@ aside input {
 }
 
 aside div {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 aside {
@@ -957,13 +957,13 @@ aside {
 
 main {
   grid-area: m;
-  margin-top: 100px;
-  max-width: 1100px;
+  margin-top: 60px;
+  max-width: 1000px;
 }
 
 #calendar {
   border:1px solid #000;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 /* Footer styles */
@@ -982,7 +982,7 @@ footer span{
   display:flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 4px;
 }
 
 .fa-heart-o {
