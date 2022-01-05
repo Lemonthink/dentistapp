@@ -735,10 +735,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-1 {
   padding: 0.25rem;
 }
@@ -806,14 +802,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: right;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-lg {
@@ -826,16 +822,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-normal {
   font-weight: 400;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .uppercase {
@@ -848,6 +844,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
 }
 
 .tracking-wide {
@@ -903,8 +903,10 @@ body {
   grid-template-rows: 100px auto 100px;
   grid-template-columns: 250px auto;
   font-family: 'Nunito', sans-serif;
-  overflow:hidden;
+  overflow-x:hidden;
 }
+
+/* Header Styles */
 
 header {
   grid-area: h;
@@ -921,20 +923,49 @@ nav div {
 }
 
 nav .company-name {
-  color: #1a75bc
+  color: #ebf6ff;
+  font-size: 45px;
+}
+
+nav a {
+  font-size: 16px;
 }
 
 nav .logo {
-  width:50px;
+  width: 90px;
 }
+
+/* Aside styles */
 
 aside {
   grid-area: a;
 }
 
+aside input {
+  background-color: #ebf6ff;
+}
+
+aside div {
+  margin-top: 100px;
+}
+
+aside {
+  margin: 20px;
+}
+
+/* Main styles */
+
 main {
   grid-area: m;
+  margin-top: 100px;
+  max-width: 1100px;
 }
+
+#calendar {
+  border:1px solid #000;
+}
+
+/* Footer styles */
 
 footer {
   grid-area: f;
@@ -942,10 +973,7 @@ footer {
   left: 0;
   right: 0;
   position: fixed;
-}
-
-aside {
-  margin: 20px;
+  color: #ebf6ff;
 }
 
 footer span{
@@ -953,14 +981,11 @@ footer span{
   display:flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
 }
 
 .fa-heart-o {
   margin: auto 7px;
-}
-
-#calendar {
-  border:1px solid #000;
 }
 
 .focus\:outline-none:focus {
