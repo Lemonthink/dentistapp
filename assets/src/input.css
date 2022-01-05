@@ -29,8 +29,12 @@ nav div {
     margin: 20px;
 }
 
-nav div:hover {
-    color:blue;
+nav .company-name {
+    color: #1a75bc
+}
+
+nav .logo {
+    width:50px;
 }
 
 aside {
