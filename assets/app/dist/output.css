@@ -963,6 +963,7 @@ main {
 
 #calendar {
   border:1px solid #000;
+  max-width: 1100px;
 }
 
 /* Footer styles */
