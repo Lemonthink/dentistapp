@@ -12,6 +12,10 @@ app.get('/app', function (req, res) {
 	res.sendFile('app/index.html');
 })
 
+app.get('/patientform', function(req, res) {
+	res.send('PATIENT FORM !!!!!')
+});
+
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
 })
