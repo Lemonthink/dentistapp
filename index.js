@@ -35,6 +35,7 @@ app.get('/feedbackForm', function(req, res) {
 });
 
 app.post('/feedbackForm', function(req, res){
+	console.log(req.body);
 	res.send('THANKS');
 });
 app.get('/miro', function (req, res) {
