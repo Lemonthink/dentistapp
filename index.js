@@ -16,6 +16,10 @@ app.get('/download', function (req, res) {
 	res.sendFile(__dirname + '/assets/app/download.html');
 })
 
+app.post('/download', function(req ,res) {
+	res.send("Thank you for downloading our app!");
+})
+
 app.get('/patientform', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/patientform.html');
 });
