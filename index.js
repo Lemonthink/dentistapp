@@ -47,6 +47,10 @@ app.get('/search', function (req, res) {
     res.send('Patient Seaerch')
 })
 
+app.get('/search', function(req, res) {
+	res.sendFile(__dirname +  '/assets/app/search.html');
+});
+
 app.get('/toothfairy', function (req, res) {
     res.send('I will give you money for your tooth')
 })
