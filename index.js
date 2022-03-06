@@ -24,6 +24,10 @@ app.get('/patientform', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/patientform.html');
 });
 
+app.post('/patientform', function(req, res) {
+	res.send('THANK YOU FOR YOUR SUBMISSION!');
+});
+
 app.get('/feedbackForm', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/feedbackForm.html');
 });
