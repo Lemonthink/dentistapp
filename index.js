@@ -39,6 +39,10 @@ app.get('/readme', function (req, res) {
   res.sendFile(__dirname+'/README.md')
 })
 
+app.get('/search', function (req, res) {
+    res.send('Patient Seaerch')
+})
+
 app.get('/toothfairy', function (req, res) {
     res.send('I will give you money for your tooth')
 })
