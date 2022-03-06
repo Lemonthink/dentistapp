@@ -12,6 +12,11 @@ app.get('/app', function (req, res) {
 	res.sendFile('app/index.html');
 })
 
+app.get('/download', function (req, res) {
+	res.sendFile('DOWNLOAD APP');
+})
+
+
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
 })
