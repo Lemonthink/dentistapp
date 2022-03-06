@@ -3,6 +3,7 @@ const app = express()
 const PORT = process.env.PORT || 3000   
 
 app.use(express.static("assets"));
+app.use(express.urlencoded({extended: false}))
 
 app.get('/', function (req, res) {
 	res.sendFile(__dirname + '/homepage.html');
@@ -25,6 +26,7 @@ app.get('/patientform', function(req, res) {
 });
 
 app.post('/patientform', function(req, res) {
+	console.log(req.body);
 	res.send('THANK YOU FOR YOUR SUBMISSION!');
 });
 
