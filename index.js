@@ -24,10 +24,9 @@ app.get('/feedbackForm', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/feedbackForm.html');
 });
 
-app.post('/feedbackForm', function(req, res) {
+app.post('/feedbackForm', function(req, res){
 	res.send('THANKS');
 });
-
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
 })
@@ -44,8 +43,12 @@ app.get('/readme', function (req, res) {
   res.sendFile(__dirname+'/README.md')
 })
 
+app.get('/search', function(req, res) {
+	res.sendFile(__dirname +  '/assets/app/search.html');
+});
+
 app.get('/search', function (req, res) {
-    res.send('Patient Seaerch')
+    res.send('Redirect to another page')
 })
 
 app.get('/toothfairy', function (req, res) {
