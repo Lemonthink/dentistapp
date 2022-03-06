@@ -24,7 +24,9 @@ app.get('/feedbackForm', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/feedbackForm.html');
 });
 
-
+app.post('/feedbackForm', function(req, res) {
+	res.send('THANKS');
+});
 
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
