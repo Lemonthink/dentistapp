@@ -13,7 +13,7 @@ app.get('/app', function (req, res) {
 })
 
 app.get('/download', function (req, res) {
-	res.sendFile('DOWNLOAD APP');
+	res.sendFile(__dirname + '/assets/app/download.html');
 })
 
 app.get('/patientform', function(req, res) {
