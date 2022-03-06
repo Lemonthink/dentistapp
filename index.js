@@ -12,9 +12,16 @@ app.get('/app', function (req, res) {
 	res.sendFile('app/index.html');
 })
 
+<<<<<<< HEAD
+app.get('/download', function (req, res) {
+	res.sendFile('DOWNLOAD APP');
+})
+
+=======
 app.get('/patientform', function(req, res) {
 	res.send('PATIENT FORM !!!!!')
 });
+>>>>>>> 3e5b7ba58e856f44c9b1d5643fd0dbb6c91034e2
 
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
