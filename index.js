@@ -19,7 +19,9 @@ app.get('/download', function (req, res) {
 app.get('/patientform', function(req, res) {
 	res.send('PATIENT FORM !!!!!')
 });
-
+app.get('/feedbackForm', function(req, res){
+	res.send('feedbackform')
+});
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
 })
