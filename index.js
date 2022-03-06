@@ -19,13 +19,12 @@ app.get('/download', function (req, res) {
 app.get('/patientform', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/patientform.html');
 });
+
 app.get('/feedbackForm', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/feedbackForm.html');
 });
 
-app.get('/feedbackForm', function(req, res){
-	res.send('feedbackform')
-});
+
 
 app.get('/miro', function (req, res) {
 	res.redirect('https://miro.com/app/board/o9J_llS_z48=/');
