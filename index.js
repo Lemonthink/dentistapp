@@ -19,6 +19,7 @@ app.get('/download', function (req, res) {
 
 app.post('/download', function(req ,res) {
 	res.send("Thank you for downloading our app!");
+	console.log(req.body);
 })
 
 app.get('/patientform', function(req, res) {
