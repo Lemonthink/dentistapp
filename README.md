@@ -27,7 +27,11 @@ Start the Tailwind CLI process by pasting this:
 Start the web server:
 `nodemon index.js`
 
+Our hosted link:
+http://www.lemon-th.ink/app/
+
 For Video Do these steps:
+
 1. Click on Search Patient
 2. Type to search for patient and click
 3. Calendar should pop-up patients procedure
