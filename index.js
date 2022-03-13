@@ -1,4 +1,6 @@
-const express = require('express')
+const express = require('express');
+const mongodb = require('mongodb');
+
 const app = express()
 const PORT = process.env.PORT || 3000   
 
@@ -68,4 +70,22 @@ app.get('/toothfairy', function (req, res) {
     res.send('I will give you money for your tooth')
 })
 
-app.listen(PORT)
+
+// CONNECT TO OUR DATABASE
+const MongoClient = mongodb.MongoClient;
+const client = new MongoClient('mongodb://localhost:27017');
+const dbName = 'iDENTify';
+
+async function run() {
+	//WAITING FOR CLIENT TO CONNECT TO DB
+	
+	await client.connect();
+	console.log('RUNNING')
+	const db = client.db(dbName);
+	console.log('LISTENING TO PORT ' + 3000);
+	app.listen(PORT);
+	
+}
+
+run();
+

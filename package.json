@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/Lemonthink/dentistapp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.4.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.7"
