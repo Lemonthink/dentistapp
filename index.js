@@ -67,7 +67,8 @@ app.post('/search',  async function (req, res) {
 	console.log(req.body);
 	const collection = db.collection('search');
 	const result = await collection.insert(req.body);
-	res.send(result);
+	const id = result.insertedIds[0]; 
+	res.redirect('/search/' + id);
 })
 
 app.get('/toothfairy', function (req, res) {
