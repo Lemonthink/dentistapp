@@ -30,6 +30,7 @@ app.get('/patientform', function(req, res) {
 
 app.post('/patientform', function(req, res) {
 	console.log(req.body);
+	const collection = db.collection('patientform');
 	res.send('THANK YOU FOR YOUR SUBMISSION!');
 });
 
