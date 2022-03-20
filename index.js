@@ -63,10 +63,11 @@ app.get('/search', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/search.html');
 });
 
-app.post('/search', function (req, res) {
+app.post('/search',  async function (req, res) {
 	console.log(req.body);
 	const collection = db.collection('search');
-    res.send('Redirect to another page')
+	const result = await collection.insert(req.body);
+	res.send(result);
 })
 
 app.get('/toothfairy', function (req, res) {
