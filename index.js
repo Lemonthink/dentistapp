@@ -71,10 +71,18 @@ app.get('/search', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/search.html');
 });
 
-app.post('/search',  async function (req, res) {
+app.post('/search', async function (req, res) {
 	console.log(req.body);
 	const collection = db.collection('search');
 	const result = await collection.insert(req.body);
+	const id = result.insertedIds[0]; 
+	res.redirect('/search/' + id);
+})
+
+app.get('/search/:id', async function (req, res) {
+	const collection = db.collection('search');
+	const { ObjectId } = require('mongodb');
+	const result = await collection.find({_id: ObjectId(req.params.id)}).toArray();
 	res.send(result);
 })
 
@@ -82,13 +90,36 @@ app.get('/toothfairy', function (req, res) {
     res.send('I will give you money for your tooth')
 })
 
-app.post('/test', function(req, res) {
+
+app.post('/test', async function(req, res) {
+
 	console.log(req.body);
 
-	//SAVE THE DATA INTO THE DATABASE
+	//Creating the collection to store the data
 	const collection = db.collection('test');
 
-	res.send('THANK YOU FOR THE TEST');
+	//Storing the data into the databse
+	const result = await collection.insert(req.body);
+
+	// Get the id of the record
+	const id = result.insertedIds[0];
+
+	// Send the user to a page that shows the data that is in the database
+	res.redirect('/test/' + id);
+})
+
+// :id means match any thing after /test/ so that we can
+// our server use the same function for any path with that id
+app.get('/test/:id', async function(req, res) {
+
+	const collection = db.collection('test');
+	// Ask the database to find a record with _id that
+	// has a value of req.params.id which is the id
+	// that was parsed from the path '/test/:id'
+	const { ObjectId } = require('mongodb');
+	const result = await collection.find({ _id: ObjectId(req.params.id) }).toArray();
+
+	res.send(result)
 })
 
 // CONNECT TO OUR DATABASE
