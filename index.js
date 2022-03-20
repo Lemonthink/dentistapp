@@ -64,6 +64,7 @@ app.get('/search', function(req, res) {
 
 app.post('/search', function (req, res) {
 	console.log(req.body);
+	const collection = db.collection('search');
     res.send('Redirect to another page')
 })
 
