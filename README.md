@@ -36,3 +36,6 @@ For Video Do these steps:
 2. Type to search for patient and click
 3. Calendar should pop-up patients procedure
 4. Pop-up should show a potential risk from drug interactions
+
+Remove merge block:
+`git reset --hard @{u}`
