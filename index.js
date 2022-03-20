@@ -65,12 +65,16 @@ app.get('/search', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/search.html');
 });
 
-app.post('/search',  async function (req, res) {
+app.post('/search', async function (req, res) {
 	console.log(req.body);
 	const collection = db.collection('search');
 	const result = await collection.insert(req.body);
 	const id = result.insertedIds[0]; 
 	res.redirect('/search/' + id);
+})
+
+app.get('/search/:id', async function (req, res) {
+	res.send('thinkg');
 })
 
 app.get('/toothfairy', function (req, res) {
