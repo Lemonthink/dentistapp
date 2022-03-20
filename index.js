@@ -28,9 +28,12 @@ app.get('/patientform', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/patientform.html');
 });
 
-app.post('/patientform', function(req, res) {
+app.post('/patientform', async function(req, res) {
 	console.log(req.body);
-	res.send('THANK YOU FOR YOUR SUBMISSION!');
+	const collection = db.collection('patientform');
+	const result = await collection.insert(req.body);
+	const id = result.insertedIds[0];
+	res.redirect('/patientform' + id);
 });
 
 app.get('/feedbackForm', function(req, res) {
@@ -62,9 +65,16 @@ app.get('/search', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/search.html');
 });
 
-app.post('/search', function (req, res) {
+app.post('/search', async function (req, res) {
 	console.log(req.body);
-    res.send('Redirect to another page')
+	const collection = db.collection('search');
+	const result = await collection.insert(req.body);
+	const id = result.insertedIds[0]; 
+	res.redirect('/search/' + id);
+})
+
+app.get('/search/:id', async function (req, res) {
+	res.send('thinkg');
 })
 
 app.get('/toothfairy', function (req, res) {
@@ -73,6 +83,7 @@ app.get('/toothfairy', function (req, res) {
 
 
 app.post('/test', async function(req, res) {
+
 	console.log(req.body);
 
 	//Creating the collection to store the data
@@ -101,7 +112,6 @@ app.get('/test/:id', async function(req, res) {
 
 	res.send(result)
 })
-
 
 // CONNECT TO OUR DATABASE
 const MongoClient = mongodb.MongoClient;
