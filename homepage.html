@@ -1,9 +1,20 @@
 <h1> Welcome to LemonThink. We are very cool people!!!!</h1>
 
-<input list = 'patients'>
-	<datalist id = 'patients'>
-		<option value = 'Bob'>
-		<option value = 'Joe'>
-		<option value = 'Ann'>
-		<option value = 'Mary'>
-	</datalist>
+<!-- 
+	action is ...
+	method is ...
+	name is ...
+
+-->
+<form action='/test' method='POST'>
+
+
+	<input list = 'patients' name='patient'>
+		<datalist id = 'patients'>
+			<option value = 'Bob'>
+			<option value = 'Joe'>
+			<option value = 'Ann'>
+			<option value = 'Mary'>
+		</datalist>
+	<button>Submit</button>
+</form>

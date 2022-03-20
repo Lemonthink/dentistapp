@@ -71,6 +71,15 @@ app.get('/toothfairy', function (req, res) {
 })
 
 
+app.post('/test', function(req, res) {
+	// console is ...
+	console.log(req.body);
+
+	// res.send means ...
+	res.send('THANK YOU FOR THE TEST');
+})
+
+
 // CONNECT TO OUR DATABASE
 const MongoClient = mongodb.MongoClient;
 const client = new MongoClient('mongodb://localhost:27017');
