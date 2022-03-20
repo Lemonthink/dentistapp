@@ -73,10 +73,11 @@ app.get('/toothfairy', function (req, res) {
 
 
 app.post('/test', function(req, res) {
-	// console is ...
 	console.log(req.body);
 
-	// res.send means ...
+	//SAVE THE DATA INTO THE DATABASE
+	const collection = db.collection('test');
+
 	res.send('THANK YOU FOR THE TEST');
 })
 
@@ -85,13 +86,14 @@ app.post('/test', function(req, res) {
 const MongoClient = mongodb.MongoClient;
 const client = new MongoClient('mongodb://localhost:27017');
 const dbName = 'iDENTify';
+let db;
 
 async function run() {
 	//WAITING FOR CLIENT TO CONNECT TO DB
 	
 	await client.connect();
 	console.log('RUNNING')
-	const db = client.db(dbName);
+	db = client.db(dbName);
 	console.log('LISTENING TO PORT ' + 3000);
 	app.listen(PORT);
 	
