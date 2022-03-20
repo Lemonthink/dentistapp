@@ -36,9 +36,10 @@ app.post('/patientform', function(req, res) {
 app.get('/feedbackForm', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/feedbackForm.html');
 });
-
+// console is ...to print messages or send information to user
 app.post('/feedbackForm', function(req, res){
 	console.log(req.body);
+	// res.send means ...sends response to the formm being submitted
 	res.send('THANKS');
 });
 app.get('/miro', function (req, res) {
