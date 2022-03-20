@@ -28,10 +28,12 @@ app.get('/patientform', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/patientform.html');
 });
 
-app.post('/patientform', function(req, res) {
+app.post('/patientform', async function(req, res) {
 	console.log(req.body);
 	const collection = db.collection('patientform');
-	res.send('THANK YOU FOR YOUR SUBMISSION!');
+	const result = await collection.insert(req.body);
+	const id = result.insertedIds[0];
+	res.redirect('/patientform' + id);
 });
 
 app.get('/feedbackForm', function(req, res) {
@@ -75,7 +77,6 @@ app.get('/toothfairy', function (req, res) {
     res.send('I will give you money for your tooth')
 })
 
-
 app.post('/test', function(req, res) {
 	console.log(req.body);
 
@@ -84,7 +85,6 @@ app.post('/test', function(req, res) {
 
 	res.send('THANK YOU FOR THE TEST');
 })
-
 
 // CONNECT TO OUR DATABASE
 const MongoClient = mongodb.MongoClient;
