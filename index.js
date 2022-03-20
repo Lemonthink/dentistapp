@@ -74,7 +74,10 @@ app.post('/search', async function (req, res) {
 })
 
 app.get('/search/:id', async function (req, res) {
-	res.send('thinkg');
+	const collection = db.collection('search');
+	const { ObjectId } = require('mongodb');
+	const result = await collection.find({_id: ObjectId(req.params.id)}).toArray();
+	res.send(result);
 })
 
 app.get('/toothfairy', function (req, res) {
