@@ -33,7 +33,13 @@ app.post('/patientform', async function(req, res) {
 	const collection = db.collection('patientform');
 	const result = await collection.insert(req.body);
 	const id = result.insertedIds[0];
-	res.redirect('/patientform' + id);
+	res.redirect('/patientform/' + id);
+});
+app.get('/patientform/:id', async function(req, res) {
+	const collection = db.collection('patientform');
+	const{ObjectId} = require('mongodb')
+	const result = await collection.find({_id: ObjectId(req.params.id)}).toArray();
+	res.send(result);
 });
 
 app.get('/feedbackForm', function(req, res) {
