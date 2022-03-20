@@ -28,11 +28,12 @@ app.get('/patientform', function(req, res) {
 	res.sendFile(__dirname +  '/assets/app/patientform.html');
 });
 
-app.post('/patientform', function(req, res) {
+app.post('/patientform', async function(req, res) {
 	console.log(req.body);
 	const collection = db.collection('patientform');
 	const result = await collection.insert(req.body);
-	res.send(result);
+	const id = result.insertedIds[0];
+	res.redirect('/patientform' + id);
 });
 
 app.get('/feedbackForm', function(req, res) {
